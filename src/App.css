@@ -1,0 +1,2354 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --navy: #071b35;
+  --blue: #1769e0;
+  --blue-2: #0c8cff;
+  --green: #17b978;
+  --text: #0f2748;
+  --muted: #61728a;
+  --line: #dbe8f7;
+  --white: #ffffff;
+  --container: 1180px;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 8% 18%, rgba(23, 105, 224, 0.12), transparent 28%),
+    radial-gradient(circle at 92% 20%, rgba(23, 105, 224, 0.08), transparent 28%),
+    linear-gradient(180deg, #f4faff 0%, #ffffff 48%, #eef7ff 100%);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.brand strong,
+.mainNav button,
+.hotline,
+.primaryBtn,
+.secondaryBtn,
+.lookupCard button {
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+}
+
+/* ================= HEADER FIXED / APPLE STYLE ================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
+  width: 100%;
+  max-width: 1440px;
+  min-height: 78px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 250px minmax(520px, 1fr) 180px;
+  align-items: center;
+  gap: 22px;
+
+  padding: 10px clamp(28px, 5vw, 72px);
+
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  border-bottom: 1px solid rgba(219, 232, 247, 0.95);
+  box-shadow: 0 10px 34px rgba(7, 27, 53, 0.045);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.brandLogo {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  object-fit: contain;
+  border-radius: 999px;
+  filter:
+    drop-shadow(0 8px 18px rgba(23, 105, 224, 0.16))
+    drop-shadow(0 2px 4px rgba(7, 27, 53, 0.08));
+}
+
+.brandText {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand strong {
+  display: block;
+  color: #0b223f;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.brand span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.mainNav {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.mainNav button {
+  flex: 0 0 auto;
+  height: 40px;
+  padding: 0 12px;
+
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+
+  color: #112842;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.mainNav button:hover {
+  background: #eef6ff;
+  color: var(--blue);
+}
+
+.mainNav button.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--blue), #0b4fb3);
+  box-shadow: 0 12px 28px rgba(23, 105, 224, 0.24);
+}
+
+.hotline {
+  justify-self: end;
+
+  width: 172px;
+  height: 46px;
+  padding: 0 16px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  border: 1.5px solid rgba(23, 105, 224, 0.34);
+  background: rgba(255, 255, 255, 0.92);
+
+  color: var(--blue);
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+
+  box-shadow: 0 12px 28px rgba(23, 105, 224, 0.08);
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  position: relative;
+
+  max-width: var(--container);
+  margin: 0 auto;
+  min-height: calc(100vh - 78px);
+
+  padding: 72px 28px 92px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(390px, 0.92fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    linear-gradient(118deg, transparent 0 44%, rgba(245, 158, 11, 0.07) 44% 45.4%, transparent 45.4%),
+    linear-gradient(25deg, transparent 0 52%, rgba(23, 105, 224, 0.07) 52% 53.2%, transparent 53.2%);
+}
+
+.heroContent,
+.heroVisual {
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent {
+  max-width: 680px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  max-width: 100%;
+  padding: 12px 18px;
+
+  border-radius: 16px;
+  border: 1px solid rgba(23, 105, 224, 0.18);
+  background: rgba(234, 244, 255, 0.9);
+
+  color: var(--blue);
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.35;
+  text-transform: uppercase;
+
+  box-shadow: 0 16px 38px rgba(23, 105, 224, 0.08);
+}
+
+.eyebrow::before {
+  content: "◈";
+  font-size: 12px;
+}
+
+.hero h1 {
+  margin: 30px 0 22px;
+  max-width: 680px;
+
+  color: #0b223f;
+  font-size: clamp(46px, 4.9vw, 72px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+
+.hero h1 span {
+  background: linear-gradient(135deg, #1769e0 0%, #0c8cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  max-width: 560px;
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.heroActions {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.primaryBtn,
+.secondaryBtn,
+.lookupCard button {
+  min-height: 52px;
+  padding: 0 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border-radius: 16px;
+  border: 0;
+
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.primaryBtn,
+.lookupCard button {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--blue), var(--blue-2));
+  box-shadow: 0 18px 38px rgba(23, 105, 224, 0.28);
+}
+
+.primaryBtn:hover,
+.lookupCard button:hover {
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  color: var(--blue);
+  background: rgba(255, 255, 255, 0.86);
+  border: 1.5px solid rgba(23, 105, 224, 0.32);
+}
+
+.trustRow {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.trustRow span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(219, 232, 247, 0.85);
+  background: rgba(255, 255, 255, 0.88);
+  color: #1d3657;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 12px 30px rgba(15, 39, 72, 0.07);
+}
+
+/* ================= HERO RIGHT ================= */
+
+.heroVisual {
+  width: 100%;
+  max-width: 520px;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heroImage {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 28px;
+
+  background-image: url("/images/hero-inspection.png");
+  background-size: cover;
+  background-position: center right;
+
+  box-shadow: 0 26px 70px rgba(7, 27, 53, 0.2);
+}
+
+.imageShade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 27, 53, 0.42), transparent 58%),
+    linear-gradient(180deg, rgba(7, 27, 53, 0.12), rgba(7, 27, 53, 0.08));
+}
+
+.imageBadge {
+  position: absolute;
+  z-index: 2;
+
+  min-height: 46px;
+  padding: 0 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.94);
+
+  color: #102642;
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  white-space: nowrap;
+
+  box-shadow: 0 14px 34px rgba(7, 27, 53, 0.16);
+}
+
+.imageBadge.top {
+  top: 18px;
+  left: 18px;
+}
+
+.imageBadge.bottom {
+  right: 18px;
+  bottom: 18px;
+}
+
+/* ================= FORM ================= */
+
+.lookupCard {
+  width: 100%;
+  padding: 28px;
+
+  border-radius: 28px;
+  border: 1px solid rgba(219, 232, 247, 0.92);
+  background: rgba(255, 255, 255, 0.94);
+
+  box-shadow: 0 26px 70px rgba(7, 27, 53, 0.12);
+}
+
+.lookupCard h2 {
+  margin: 0 0 8px;
+
+  color: #071b35;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+.lookupCard p {
+  max-width: 390px;
+  margin: 0 auto 20px;
+
+  color: var(--muted);
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.lookupCard input,
+.lookupCard select {
+  width: 100%;
+  height: 50px;
+
+  padding: 0 14px;
+
+  border-radius: 14px;
+  border: 1px solid #d6e3f2;
+  background: #ffffff;
+
+  color: #102642;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+.lookupCard input:focus,
+.lookupCard select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(23, 105, 224, 0.1);
+}
+
+.lookupCard button {
+  width: 100%;
+  margin-top: 14px;
+}
+
+.lookupCard small {
+  display: block;
+  margin-top: 15px;
+
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* ================= STATS ================= */
+
+.statsBar {
+  max-width: calc(var(--container) - 56px);
+  margin: -42px auto 0;
+
+  position: relative;
+  z-index: 3;
+
+  min-height: 92px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(219, 232, 247, 0.95);
+  background: rgba(255, 255, 255, 0.94);
+
+  box-shadow: 0 24px 70px rgba(7, 27, 53, 0.11);
+}
+
+.statsBar div {
+  padding: 22px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-right: 1px solid rgba(219, 232, 247, 0.9);
+}
+
+.statsBar div:last-child {
+  border-right: 0;
+}
+
+.statsBar strong {
+  color: var(--blue);
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.statsBar span {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 96px 28px 70px;
+}
+
+.sectionTitle {
+  max-width: 860px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.sectionTitle span,
+.miniLabel {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  color: var(--green);
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sectionTitle h2 {
+  margin: 0;
+
+  color: #0b223f;
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: clamp(30px, 3.4vw, 44px);
+  font-weight: 900;
+  line-height: 1.22;
+  letter-spacing: -0.035em;
+}
+
+/* ================= SERVICES ================= */
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.serviceCard {
+  position: relative;
+
+  min-height: 250px;
+  padding: 26px 18px 34px;
+  text-align: center;
+
+  border-radius: 22px;
+  border: 1px solid rgba(219, 232, 247, 0.92);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+
+  box-shadow: 0 20px 50px rgba(7, 27, 53, 0.07);
+  transition: 0.24s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 26px 60px rgba(23, 105, 224, 0.13);
+}
+
+.cardIcon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 16px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 999px;
+  background: linear-gradient(135deg, #edf6ff, #dff2ff);
+
+  color: var(--blue);
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.serviceCard h3 {
+  max-width: 150px;
+  margin: 0 auto 12px;
+
+  color: #0b223f;
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.serviceCard p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.serviceCard small {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+
+  color: #bcc9d9;
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* ================= IMAGE TEXT ================= */
+
+.imageTextSection {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 50px 28px 96px;
+
+  display: grid;
+  grid-template-columns: 0.95fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.supportImage {
+  position: relative;
+  height: 395px;
+  overflow: hidden;
+  border-radius: 26px;
+
+  background-image: url("/images/checklist.png");
+  background-size: cover;
+  background-position: center;
+
+  box-shadow: 0 24px 66px rgba(7, 27, 53, 0.15);
+}
+
+.supportImage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(7, 27, 53, 0.48));
+}
+
+.supportImageCard {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  z-index: 2;
+
+  width: min(330px, calc(100% - 48px));
+  padding: 18px 20px;
+
+  border-radius: 18px;
+  background: white;
+  text-align: center;
+
+  box-shadow: 0 18px 36px rgba(7, 27, 53, 0.18);
+}
+
+.supportImageCard strong {
+  display: block;
+  color: #071b35;
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.supportImageCard span {
+  display: block;
+  margin-top: 5px;
+  color: #40556f;
+}
+
+.supportContent h2 {
+  max-width: 620px;
+  margin: 0 0 18px;
+
+  color: #0b223f;
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: clamp(34px, 3.8vw, 52px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.supportContent p {
+  max-width: 620px;
+  margin: 0 0 22px;
+
+  color: var(--muted);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.78;
+}
+
+.checkList {
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.checkList li {
+  margin-bottom: 12px;
+  color: #1d3657;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.checkList li::before {
+  content: "✓";
+  margin-right: 10px;
+  color: var(--green);
+  font-weight: 900;
+}
+
+/* ================= PROCESS ================= */
+
+.process {
+  padding: 96px max(28px, calc((100vw - var(--container)) / 2)) 110px;
+
+  color: white;
+  background:
+    radial-gradient(circle at 16% 16%, rgba(23, 105, 224, 0.42), transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(14, 166, 107, 0.22), transparent 25%),
+    linear-gradient(135deg, #071b35 0%, #0d315f 48%, #061428 100%);
+}
+
+.process .sectionTitle h2 {
+  color: white;
+}
+
+.process .sectionTitle span {
+  color: #58a6ff;
+}
+
+.stepGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.stepCard {
+  min-height: 230px;
+  padding: 28px 24px;
+
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+}
+
+.stepCard strong {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 999px;
+  background: #eafff5;
+
+  color: var(--blue);
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.stepCard h3 {
+  margin: 0 0 12px;
+  color: white;
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.stepCard p {
+  margin: 0;
+  color: #c9d8ea;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* ================= FAQ / CTA / FOOTER ================= */
+
+.faqSection {
+  background: #eef7ff;
+}
+
+.faqList {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+details {
+  margin-bottom: 14px;
+  padding: 20px 24px;
+
+  border-radius: 18px;
+  border: 1px solid rgba(219, 232, 247, 0.9);
+  background: white;
+
+  box-shadow: 0 14px 34px rgba(7, 27, 53, 0.06);
+}
+
+summary{
+    display:flex;
+    align-items:center;
+
+    width:100%;
+
+    padding:2px 0;
+
+    cursor:pointer;
+
+    list-style:none;
+
+    text-align:left;
+
+    justify-content:flex-start;
+
+    color:#102642;
+
+    font-family:"Be Vietnam Pro", Arial, sans-serif;
+
+    font-size:18px;
+    font-weight:800;
+    line-height:1.5;
+}
+
+summary::-webkit-details-marker{
+    display:none;
+}
+
+summary::before{
+
+    content:"▸";
+
+    width:24px;
+
+    margin-right:14px;
+
+    color:#1c5fd4;
+
+    font-size:18px;
+
+    flex-shrink:0;
+
+    transition:.25s;
+
+}
+
+details[open] summary::before{
+
+    transform:rotate(90deg);
+
+}
+
+details p{
+
+    margin:16px 0 4px 38px;
+
+    text-align:left;
+
+    color:var(--muted);
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+.cta {
+  position: relative;
+
+  max-width: calc(var(--container) - 56px);
+  margin: 84px auto;
+  padding: 84px 28px;
+
+  overflow: hidden;
+  border-radius: 34px;
+
+  color: white;
+  text-align: center;
+
+  background:
+    radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.2), transparent 32%),
+    linear-gradient(135deg, #1769e0 0%, #0b4fb3 42%, #071b35 100%);
+
+  box-shadow: 0 28px 70px rgba(23, 105, 224, 0.25);
+}
+
+.ctaPattern {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0 46%, rgba(255, 255, 255, 0.1) 46% 47%, transparent 47%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.13), transparent 60%);
+}
+
+.cta h2,
+.cta p,
+.cta a {
+  position: relative;
+  z-index: 2;
+}
+
+.cta h2 {
+  margin: 0 0 12px;
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: clamp(32px, 4vw, 54px);
+  letter-spacing: -0.04em;
+}
+
+.cta p {
+  color: #dcecff;
+}
+
+.white {
+  background: white;
+  color: var(--blue);
+  box-shadow: none;
+}
+
+.footer {
+  padding: 48px max(28px, calc((100vw - var(--container)) / 2));
+  color: white;
+  background: #061428;
+}
+
+.footer strong {
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: 20px;
+}
+
+.footer p {
+  max-width: 760px;
+  color: #b8c7da;
+  line-height: 1.75;
+}
+
+/* ================= FLOAT ================= */
+
+.floatingButtons {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.floatingButtons a {
+  width: 64px;
+  height: 64px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-2));
+
+  color: white;
+  font-weight: 900;
+
+  box-shadow: 0 18px 40px rgba(7, 27, 53, 0.25);
+}
+
+.floatingButtons a:last-child {
+  background: linear-gradient(135deg, var(--green), #0ea66b);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1180px) {
+  .header {
+    grid-template-columns: 210px minmax(460px, 1fr) 160px;
+    gap: 14px;
+  }
+
+  .brandLogo {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+
+  .brand strong {
+    font-size: 15px;
+  }
+
+  .brand span {
+    font-size: 10px;
+  }
+
+  .mainNav button {
+    height: 36px;
+    padding: 0 8px;
+    font-size: 11px;
+  }
+
+  .hotline {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 430px);
+    gap: 36px;
+    padding-top: 56px;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 5vw, 62px);
+  }
+
+  .heroVisual {
+    max-width: 430px;
+  }
+
+  .heroImage {
+    height: 250px;
+  }
+
+  .lookupCard {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 980px) {
+  .header {
+    display:grid;
+
+    grid-template-columns:1fr auto;
+
+    grid-template-areas:
+        "brand hotline"
+        "menu menu";
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px 18px;
+}
+
+ .brand{
+    grid-area:brand;
+}
+
+.hotline{
+    grid-area:hotline;
+
+    display:inline-flex !important;
+
+    position:static !important;
+
+    justify-self:end;
+
+    min-width:150px;
+    height:42px;
+
+    font-size:14px;
+}
+
+.mainNav{
+    grid-area:menu;
+
+    width:100%;
+
+    overflow-x:auto;
+
+    justify-content:flex-start;
+}
+
+ 
+
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding: 44px 5% 72px;
+  }
+
+  .heroContent,
+  .heroVisual {
+    max-width: 100%;
+    justify-self: stretch;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 10vw, 56px);
+  }
+
+  .heroImage {
+    height: 260px;
+  }
+
+  .formGrid,
+  .statsBar,
+  .serviceGrid,
+  .stepGrid,
+  .imageTextSection {
+    grid-template-columns: 1fr;
+  }
+
+  .statsBar {
+    margin: -32px 5% 0;
+  }
+
+  .statsBar div {
+    border-right: 0;
+    border-bottom: 1px solid rgba(219, 232, 247, 0.9);
+  }
+
+  .section,
+  .imageTextSection {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .supportImage {
+    height: 330px;
+  }
+
+  .process {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .cta {
+    margin: 52px 5%;
+  }
+}
+
+/* ===== HERO BUTTONS + TRUST TABS BALANCE ===== */
+
+.heroActions {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.heroActions .primaryBtn,
+.heroActions .secondaryBtn {
+  min-width: 190px;
+  height: 58px;
+  padding: 0 28px;
+  border-radius: 18px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.heroActions .primaryBtn {
+  box-shadow: 0 18px 38px rgba(23, 105, 224, 0.28);
+}
+
+.heroActions .secondaryBtn {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1.5px solid rgba(23, 105, 224, 0.32);
+}
+
+/* 3 tab nhỏ theo tỷ lệ dễ nhìn hơn */
+.trustRow {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.18fr;
+  gap: 14px;
+  max-width: 660px;
+}
+
+.trustRow span {
+  height: 50px;
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(219, 232, 247, 0.95);
+
+  color: #102642;
+  font-size: 15px;
+  font-weight: 850;
+  white-space: nowrap;
+
+  box-shadow:
+    0 12px 28px rgba(7, 27, 53, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Nhấn nhẹ tab quan trọng nhất */
+.trustRow span:nth-child(3) {
+  min-width: 190px;
+}
+
+/* Mobile / màn hình hẹp */
+@media (max-width: 760px) {
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .heroActions .primaryBtn,
+  .heroActions .secondaryBtn {
+    width: 100%;
+  }
+
+  .trustRow {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .trustRow span {
+    width: 100%;
+  }
+}
+
+/* ===== CENTER HERO CTA BUTTONS ===== */
+
+.heroActions {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.heroActions .primaryBtn,
+.heroActions .secondaryBtn {
+  min-width: 210px;
+  text-align: center;
+}
+
+.heroContent {
+  text-align: center;
+}
+
+.hero p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== FINAL PROCESS FIX - 4 CARD GỌN, KHÔNG MẤT NỘI DUNG ===== */
+
+.process {
+  padding: 96px 32px 110px;
+  overflow-x: hidden;
+}
+
+.process .sectionTitle {
+  max-width: 1080px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.process .sectionTitle h2 {
+  font-size: 52px;
+  line-height: 1.15;
+}
+
+.stepGrid {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stepCard {
+  min-height: 380px;
+  padding: 36px 26px;
+
+  border-radius: 28px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  text-align: left;
+}
+
+.stepCard strong {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 28px;
+
+  font-size: 28px;
+  flex: 0 0 56px;
+}
+
+.stepCard h3 {
+  margin: 0 0 16px;
+
+  font-size: 23px;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.stepCard p {
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+@media (max-width: 980px) {
+  .process {
+    overflow-x: auto;
+  }
+
+  .stepGrid {
+    min-width: 1080px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== CTA FINAL POLISH ===== */
+
+.cta {
+  max-width: 1080px;
+  margin: 84px auto;
+  padding: 76px 32px;
+
+  border-radius: 34px;
+  text-align: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.24), transparent 34%),
+    linear-gradient(135deg, #1769e0 0%, #0d4fb3 46%, #071b35 100%);
+
+  box-shadow:
+    0 28px 70px rgba(23, 105, 224, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.cta h2 {
+  margin: 0 0 16px;
+
+  color: #ffffff;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.cta p {
+  max-width: 620px;
+  margin: 0 auto 24px;
+
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 18px;
+  line-height: 1.65;
+  font-weight: 600;
+}
+
+.cta .white {
+  min-width: 190px;
+  height: 54px;
+
+  background: #ffffff;
+  color: #1769e0;
+
+  border-radius: 16px;
+  box-shadow: 0 18px 38px rgba(7, 27, 53, 0.18);
+}
+
+.cta .white:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER FINAL - LEFT ALIGN LIKE SAMPLE ===== */
+
+.footer {
+  margin-top: 80px;
+  padding: 56px 0 34px;
+  background: #254696;
+  color: #ffffff;
+  text-align: left;
+}
+
+.footerInner {
+  width: min(100% - 56px, 1180px);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.55fr 0.8fr 1fr;
+  gap: 86px;
+
+  align-items: start;
+  text-align: left;
+}
+
+.footerBrand,
+.footerLinks,
+.footerContact {
+  text-align: left;
+}
+
+.footerLogoRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.footerLogo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 4px;
+  flex: 0 0 48px;
+}
+
+.footerLogoRow strong {
+  display: block;
+  font-size:18px;
+    letter-spacing:-0.02em;
+  line-height: 1.1;
+  font-weight: 900;
+  color: #ffffff;
+  text-align: left;
+}
+
+.footerLogoRow span {
+  display: block;
+  margin-top: 5px;
+  color: #d9e8ff;
+  font-size: 13px;
+  text-align: left;
+}
+
+.footerBrand p {
+  max-width: 540px;
+  margin: 0;
+  color: #eef5ff;
+  font-size: 14px;
+  line-height: 1.85;
+  text-align: left;
+}
+
+.footerMeta {
+  margin-top: 22px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.footerSocial {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.footerSocial a {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(255, 255, 255, 0.13);
+  color: white;
+  font-weight: 900;
+}
+
+.footerLinks h3,
+.footerContact h3 {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom:22px;
+  line-height: 1.2;
+  font-weight: 900;
+  text-align: left;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footerLinks a {
+  margin-bottom: 14px;
+  color: #eef5ff;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.footerContact p {
+  margin: 0 0 18px;
+  color: #eef5ff;
+  font-size: 14px;
+  line-height: 1.8  ;
+  text-align: left;
+}
+
+.footerBottom {
+  max-width: 1180px;
+  margin: 46px auto 0;
+  padding-top: 28px;
+
+  border-top: 1px solid rgba(255,255,255,.18);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+.footerBottom p {
+  margin: 0;
+  color: #dceaff;
+  font-size: 14.5px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.footerBottom div{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:42px;
+    width:100%;
+}
+
+.footerBottom a{
+    text-align:center;
+}
+
+.footerBottom a {
+  color: #eef5ff;
+  font-size: 14.5px;
+  white-space: nowrap;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .footer {
+    padding: 46px 0 30px;
+  }
+
+  .footerInner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footerBottom div {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+/* ===== SERVICE CARDS POLISH ===== */
+
+.serviceCard h3 {
+  max-width: 130px;
+  font-size: 15px;
+  line-height: 1.25;
+  margin: 0 auto 10px;
+}
+
+.serviceCard p {
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+.serviceCard {
+  min-height: 230px;
+  padding: 24px 16px 32px;
+}
+
+.cardIcon {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 14px;
+}
+
+/* ===== CHECKLIST SECTION POLISH ===== */
+
+.supportContent {
+  max-width: 560px;
+}
+
+.supportContent h2 {
+  max-width: 560px;
+  font-size: clamp(34px, 3.4vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.supportContent p {
+  max-width: 540px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.checkList {
+  margin-top: 22px;
+  margin-bottom: 28px;
+}
+
+.checkList li {
+  margin-bottom: 10px;
+  font-size: 15.5px;
+  line-height: 1.45;
+}
+
+.checkList li::before {
+  margin-right: 9px;
+}
+
+/* ===== VEHICLE IMAGE GALLERY ===== */
+
+.vehicleGallery {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 76px 28px 40px;
+}
+
+.galleryIntro {
+  max-width: 760px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.galleryIntro span {
+  color: var(--green);
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.galleryIntro h2 {
+  margin: 10px 0 14px;
+  color: #0b223f;
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: clamp(32px, 3.6vw, 46px);
+  font-weight: 900;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+
+.galleryIntro p {
+  margin: 0 auto;
+  max-width: 660px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: 1.618fr 1fr 1fr;
+  grid-auto-rows: 220px;
+  gap: 18px;
+}
+
+.galleryCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  background: #0b1f3a;
+  box-shadow: 0 24px 60px rgba(7, 27, 53, 0.12);
+}
+
+.galleryCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.galleryCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 35%, rgba(7, 27, 53, 0.78)),
+    linear-gradient(90deg, rgba(7, 27, 53, 0.2), transparent 55%);
+}
+
+.galleryCard div {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 20px;
+  z-index: 2;
+}
+
+.galleryCard h3 {
+  margin: 0 0 6px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.galleryCard p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.galleryCard:hover img {
+  transform: scale(1.05);
+}
+
+.galleryCard1 {
+  grid-row: span 2;
+}
+
+.galleryCard1 h3 {
+  font-size: 26px;
+}
+
+.galleryCard1 p {
+  max-width: 420px;
+}
+
+@media (max-width: 980px) {
+  .galleryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .galleryCard1 {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 240px;
+  }
+}
+
+/* ===== STATS AFTER GALLERY ===== */
+
+.statsBar {
+  margin: 36px auto 70px;
+}
+
+/* ===== FIX GAP HERO -> GALLERY ===== */
+
+.hero {
+  min-height: auto;
+  padding-bottom: 36px;
+}
+
+.vehicleGallery {
+  padding-top: 28px;
+}
+
+.galleryIntro {
+  margin-bottom: 26px;
+}
+
+/* Nếu vẫn còn rộng, giảm thêm ở màn hình desktop */
+@media (min-width: 981px) {
+  .hero {
+    padding-top: 56px;
+    padding-bottom: 28px;
+  }
+
+  .vehicleGallery {
+    padding-top: 22px;
+  }
+}
+
+/* ===== MOBILE UX OPTIMIZATION ===== */
+
+.mobileFloatingCta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Ẩn các khối phụ trên mobile */
+  .heroActions,
+  .trustRow,
+  .statsBar,
+  .floatingButtons {
+    display: none !important;
+  }
+
+  /* Thu gọn hero */
+  .hero {
+    min-height: auto !important;
+    padding: 28px 5% 24px !important;
+    gap: 22px !important;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    padding: 9px 12px;
+    border-radius: 12px;
+  }
+
+  .hero h1 {
+    margin: 18px 0 12px;
+    font-size: clamp(34px, 11vw, 46px);
+    line-height: 1.05;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 92%;
+  }
+
+  .heroImage {
+    height: 190px;
+    border-radius: 22px;
+  }
+
+  .lookupCard {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .lookupCard h2 {
+    font-size: 22px;
+  }
+
+  .lookupCard p {
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .lookupCard input,
+  .lookupCard select {
+    height: 46px;
+    font-size: 13px;
+  }
+
+  /* Giảm khoảng cách block sau hero */
+  .vehicleGallery {
+    padding-top: 24px !important;
+  }
+
+  /* Nút Tra cứu ngay cố định dưới màn hình */
+  .mobileFloatingCta {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 99999;
+
+    display: block;
+  }
+
+  .mobileFloatingCta a {
+    height: 54px;
+    border-radius: 999px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, var(--blue), var(--blue-2));
+    color: white;
+
+    font-family: "Be Vietnam Pro", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+
+    box-shadow: 0 16px 34px rgba(23, 105, 224, 0.32);
+  }
+
+  body {
+    padding-bottom: 82px;
+  }
+}
+
+/* ===== MOBILE: GALLERY KÉO NGANG GIỐNG PROCESS ===== */
+
+@media (max-width: 768px) {
+  .vehicleGallery {
+    padding: 40px 0 34px !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .galleryIntro {
+    width: min(100% - 36px, 520px);
+    margin: 0 auto 22px;
+    padding: 0;
+  }
+
+  .galleryIntro h2 {
+    font-size: 28px;
+    line-height: 1.18;
+  }
+
+  .galleryIntro p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .galleryGrid {
+    width: max-content;
+    min-width: max-content;
+
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 18px;
+
+    padding: 0 20px 16px;
+    overflow: visible;
+  }
+
+  .galleryCard,
+  .galleryCard1 {
+    width: 290px !important;
+    min-width: 290px !important;
+    height: 360px !important;
+    grid-row: auto !important;
+    flex: 0 0 290px;
+
+    border-radius: 26px;
+  }
+
+  .galleryCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .galleryCard div {
+    left: 18px;
+    right: 18px;
+    bottom: 20px;
+    text-align: left;
+  }
+
+  .galleryCard h3,
+  .galleryCard1 h3 {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .galleryCard p,
+  .galleryCard1 p {
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+}
+
+/* ===== MOBILE: SERVICES KÉO NGANG GIỐNG PROCESS ===== */
+
+@media (max-width: 768px) {
+  .section#services {
+    padding: 52px 0 42px !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .section#services .sectionTitle {
+    width: min(100% - 36px, 520px);
+    margin: 0 auto 24px;
+    padding: 0;
+  }
+
+  .section#services .sectionTitle h2 {
+    font-size: 28px;
+    line-height: 1.18;
+  }
+
+  .serviceGrid {
+    width: max-content;
+    min-width: max-content;
+
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 18px;
+
+    padding: 0 20px 18px;
+    overflow: visible;
+  }
+
+  .serviceCard {
+    width: 290px !important;
+    min-width: 290px !important;
+    height: 330px !important;
+    flex: 0 0 290px;
+
+    padding: 36px 26px 34px;
+    border-radius: 26px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+  }
+
+  .serviceCard h3 {
+    max-width: 220px;
+    font-size: 21px;
+    line-height: 1.25;
+    margin: 14px auto 12px;
+  }
+
+  .serviceCard p {
+    max-width: 230px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .serviceCard small {
+    bottom: 24px;
+    font-size: 22px;
+  }
+
+  .cardIcon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+    font-size: 30px;
+  }
+}
+
+#top,
+#about,
+#checklist,
+#process,
+#services,
+#faq,
+#contact {
+  scroll-margin-top: 96px;
+}
+
+/* ===== STICKY HEADER ALWAYS ON TOP ===== */
+
+.header {
+  position: fixed !important;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: min(100%, 1440px);
+  z-index: 99999;
+}
+
+/* Chừa khoảng trống để nội dung không bị header che */
+.page {
+  padding-top: 78px;
+}
+
+@media (max-width: 980px) {
+  .page {
+    padding-top: 122px;
+  }
+}
+
+/* ===== FOOTER BOTTOM CENTER FINAL FIX ===== */
+
+.footerBottom {
+  width: min(100% - 56px, 1180px);
+  margin: 44px auto 0;
+  padding-top: 28px;
+
+  border-top: 1px solid rgba(255,255,255,.18);
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 18px;
+  text-align: center !important;
+}
+
+.footerBottom p {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto !important;
+
+  text-align: center !important;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footerBottom div {
+  width: 100%;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footerBottom a {
+  text-align: center !important;
+  font-size: 13px;
+}
+
+.footerBottom a + a::before {
+  content: "•";
+  margin-right: 10px;
+  opacity: 0.75;
+}
+
+/* ===== FLOATING ZALO + CHAT BUBBLES ===== */
+
+.floatingContact {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 99998;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.floatingContactBtn {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  color: #ffffff;
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+
+  box-shadow:
+    0 18px 38px rgba(7, 27, 53, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+
+  transition: 0.22s ease;
+}
+
+.floatingContactBtn:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+.zaloBtn {
+  background: linear-gradient(135deg, #1769e0, #0c8cff);
+}
+
+.chatBtn {
+  background: linear-gradient(135deg, #17b978, #0ea66b);
+}
+
+/* Mobile: giữ nút Tra cứu ngay, ẩn bong bóng để không bị rối */
+@media (max-width: 768px) {
+  .floatingContact {
+    display: none;
+  }
+}
+
+/* ===== MOBILE FLOATING CONTACT ENABLE ===== */
+
+@media (max-width: 768px) {
+  .floatingContact {
+    position: fixed;
+    right: 14px;
+    bottom: 86px;
+    z-index: 99998;
+
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .floatingContactBtn {
+    width: 54px;
+    height: 54px;
+    font-size: 12px;
+  }
+
+  .hotline {
+    display: inline-flex !important;
+
+    position: fixed;
+    right: 14px;
+    bottom: 206px;
+    z-index: 99998;
+
+    width: auto;
+    min-width: 138px;
+    height: 44px;
+    padding: 0 16px;
+
+    background: rgba(255, 255, 255, 0.94);
+    border: 1.5px solid rgba(23, 105, 224, 0.35);
+    border-radius: 999px;
+
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 900;
+
+    box-shadow: 0 14px 32px rgba(7, 27, 53, 0.16);
+  }
+
+  .mobileFloatingCta {
+    bottom: 16px;
+  }
+}
+
+/* ===== FOOTER SOCIAL ICON COLORS ===== */
+
+.footerSocial a {
+  color: #ffffff;
+}
+
+/* Facebook */
+.footerSocial a:first-child {
+  background: linear-gradient(135deg, #1877f2, #0d5bd8);
+}
+
+/* YouTube */
+.footerSocial a:last-child {
+  background: linear-gradient(135deg, #ff0033, #cc0000);
+  box-shadow:
+    0 12px 28px rgba(255, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* ===== FLOATING CALL ICON FINAL ===== */
+
+.callBtn {
+  background: linear-gradient(
+    135deg,
+    #ff3b3b 0%,
+    #e60012 42%,
+    #b80000 100%
+  );
+
+  border: 2.5px solid rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 14px 32px rgba(184, 0, 0, 0.34),
+    0 0 0 5px rgba(255, 255, 255, 0.72),
+    0 0 0 7px rgba(184, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
+.callIcon {
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+}
+
+/* Mobile: icon lớn gấp khoảng 3 lần icon cũ */
+@media (max-width: 768px) {
+  .callIcon {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+/* ===== MOBILE FLOATING CONTACT SIZE FIX ===== */
+
+@media (max-width: 768px) {
+  .floatingContact {
+    right: 12px;
+    bottom: 90px;
+    gap: 8px;
+  }
+
+  .floatingContactBtn {
+    width: 46px !important;
+    height: 46px !important;
+    font-size: 10.5px !important;
+    border-width: 2px !important;
+  }
+
+  .callIcon {
+    width: 22px !important;
+    height: 22px !important;
+  }
+}
